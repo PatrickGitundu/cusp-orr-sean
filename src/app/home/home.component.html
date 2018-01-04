@@ -1,0 +1,104 @@
+<body>
+<main>
+<div class="pintarget"> 
+	<app-navbar></app-navbar>
+	<div class="row">
+		<div class="col s12"><br/><br/></div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col s6">
+				<a href="http://www1.nyc.gov/site/orr/index.page"><img src="assets/images/logo_long.png" alt="Office of recovery and Resiliency" style="width: 410px; height: 120px;"/></a> 
+			</div>
+			<div class="col s6">
+				<a href="http://cusp.nyu.edu/"><img src="assets/images/cusp-nyu.png" alt="NYU CUSP" class="responsive-img" style="width: 410px; height: 120px;"/></a>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col s12">
+				<div class="jumbotron">
+					<h1>New York City's Food Distribution Network Vulnerability Study</h1>
+						<h5>Project Overview:</h5>
+							<p>This Capstone Project for CUSP was conducted in collaboration with the New York City Mayor's Office of Recovery and Resiliency (ORR) to identify the effects of food disruptions on vulnerable populations in New York City. The team identified metrics to define and identify the most vulnerable neighborhoods and critical points-of-sale (POS) outlets in various scenarios. POS outlets are susceptible to service disruptions, which may cause neighborhoods to be vulnerable to store closures and ultimately food shortages. The analysis was conducted for the general population as well as critical segments of the population - Supplemental Nutrition Assistance Program (SNAP) recipients and New York City Housing Authority (NYCHA) households.</p>
+							<p>The findings show a consistency between critical POS outlets in vulnerable neighborhoods with large populations of SNAP and NYCHA populations. However, there were also many instances in which criticality did not conform to expected trends. The most critical neighborhoods and POS's by each scenario are provided as case studies in this report, both for validation as well as studying underlying socioeconomic trends. These results form the basis of the team's policy recommendations provided to the ORR.</p>
+							<p>The project team also consolidated all the analyses into a web tool for the ORR, which provides an interactive visualization of population vulnerability scores and POS criticality scores. Using this, the ORR will be able to easily identify key neighborhoods and storefronts as the basis for targeted assistance programs. Moving forward, the ORR aims to build off the team's existing work and incorporate it as a tool for several of their initiatives.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col s12">
+				<ul class="collapsible popout" data-collapsible="accordion">
+					<li>
+						<div class="collapsible-header active"><h5>Introduction</h5></div>
+	      				<div class="collapsible-body">
+	      					<p>This capstone project was conducted on behalf of the New York City Mayor's Office of Recovery and Resiliency (ORR). The ORR was established in May 2014 by Mayor Bill de Blasio in response to Superstorm Sandy - which in October 2012 led to billions of dollars in damages and exposed many infrastructure vulnerabilities within the City. In April 2015, Mayor de Blasio released One New York: The Plan for a Strong and Just City (OneNYC), which serves as the foundation for the ORR's mission. The ORR currently leads the City's $20 billion resiliency program, focusing on four main categories: climate change, coastal protection, critical infrastructure and services, and communities.</p>
+							<p>One focus of the ORR is the City's food distribution network. This network relies on a complex network of supply points, distributors, and points-of-sale (POS) scattered throughout the city. A 2016 study by the New York City Economic Development Corporation (NYCEDC) in conjunction with the ORR identified some key points: 4 bridges and 2 tunnels carry more than 50% of food volume into the City, 99% of all last-mile delivery within the City is conducted by trucks, and the Hunts Point Food Distribution Center is the single largest distributor in the City (12% of total). Although there are macro-level risks associated with logistics, the study acknowledged that the network was unlikely to be significantly impacted by disruption to any single distributor. Localized risks, however, remained - which would form the basis for this capstone project.</p>
+							<p>The ORR initially contracted the Boston Consulting Group (BCG) in 2016 to perform a risk analysis on the distribution network. BCG collected a series of data in the form of surveys and interviews, and developed several distribution profiles. One of their key deliverables was a database and model that could assess resiliency at the zip code level. All of BCG's findings and data were provided to the project team by the ORR at the onset to serve as the foundation for continued work. The ORR's ultimate goal for this study was to prevent the need for emergency feeding at any level within the City.</p> 
+							<p>To hone in on localized risks, the project team chose to focus on individual POSs and neighborhoods at the census block and tract levels. The team sought to first define <b>"Food Vulnerability"</b> in a series of quantifiable metrics based off of the existing data, and then apply them to identify the most critical POSs and neighborhoods. Further analysis was conducted into vulnerable population segments, such as Supplemental Nutrition Assistance Program (SNAP) and New York City Housing Authority (NYCHA) households. These would then be provided to the ORR for targeted assistance, while also serving as case studies to identify the socio-economic trends behind the most vulnerable areas.</p>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header"><h5>Data</h5></div>
+	      				<div class="collapsible-body">
+	      					<p>The datasets used in this project came from three major sources: previous NYC food distribution resiliency study datasets created by BCG and commissioned by the ORR, New York SNAP retailers and NYCHA housing datasets provided by and United States Census Bureau. The BCG study datasets include geospatial and economic profiles of each POS.</p> 
+								<h5>Data Cleaning</h5>
+								<p>The initial step in our research project was to clean and sort the data. The team decided to focus on disruptions to the food supply network on a micro-scale, or in other words single store closures. We created a three tier system to group each POS by and to make sure our analysis took into account realistic food supply properties. Tier 1 stores, which includes food markets and chain supermarkets, were assumed to carry a variety of fresh fruits and vegetables, dairy, and protein. Tier 1 food outlets have the widest selection of food and are deemed most important to residents. Tier 2 food outlets, which includes bodegas, chain convenience stores, independent restaurant chains, chain quick service restaurants, and drug stores like Duane Reade, were assumed to carry limited food options for residents. This may be due to lack of variety like in a bodega or drug store, or due to restaurant prices and accessibility. Tier 3 food outlets, which include hotels, correctional institutions, schools, hospitals, and pharmacies, are not open to the public and were assumed to only serve as a public food source in emergency situations.</p> 
+								<p>Another aspect of the data cleaning process involved removing census areas contained completely within parks or where the population was zero. This helped remove outliers and improve the reliability of our results.</p>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header"><h5>Methodology</h5></div>
+	      				<div class="collapsible-body">
+		      				<p>To quantify the overall impact of single POS disruptions towards neighboring communities, we hereby present a methodology for ORR to use. This methodology is comprised of several sub-models, each represents different scenarios of food outlets disruptions towards impacts on urban food accessibility. For the purpose of conciseness, only three scenarios will be presented in this report, namely the General Population scenario, SNAP scenario and NYCHA scenario. Different scenarios represents the impact of single POS disruption towards different groups of people in NYC. However, the skeleton of the model behind these scenarios remains similar. This section will start with the definitions of several major technical concepts as well as assumptions we made in this project, and then highlight the main functionality of the methodology. Finally, each scenarios will be discussed in detail.</p>
+							<p>We defined two key metrics to evaluate the last-mile food system resilience: vulnerability score and criticality score. The vulnerability score is based on the assumption that once a POS fails, customers will need to travel additional distance in order to reach their next closest POS. As there is no groundtruth data or methods to know the exact POS preferences for NYC residents, we made the assumption that the most prefered POS for each community is the one with the least walking distance. The vulnerability score is then calculated as the distance increase resulting from the most prefered POS closed, and weighted by the size of affected group.</p>
+							<p>The criticality score reflects the critical status of the POS regarding food resilience. It is a measure of negative impacts if one POS were disrupted. The criticality score is calculated as the sum of relevant vulnerability scores of affected communities, which are those neighborhoods that regard this particular POS as their most prefered one. The criticality score of one POS is also affected by proximity of other POS. We define POS with no other POS within a radius of 0.25 mile zone as a prerequisite of being regarded as a critical POS.</p>
+							<p>The actual model we developed in this project consists of three main parts: traveling distance computation, population vulnerability score calculations, and POS criticality score calculations. The traveling distance between populations and POS outlets are calculated by constructing a local street network graph and using Dijkstra's algorithm for shortest routing. In this way, both the distance increase as well as the exact nearest POS outlet can be found. Using this results the vulnerability scores can be calculated for each population. Then the critical scores for POS outlets can be calculated excluding those with nearby alternatives. Both scores will then be normalized to 0 to 1 for presentation purpose. The vulnerability and criticality scores can be used as metrics to identify most vulnerable communities and critical POS regarding food distribution resilience.</p>
+					
+							<ul class="collapsible" data-collapsible="expandable">
+								<li>
+									<div class="collapsible-header active"><h6><a href="#">Entire Population</a></h6></div>
+		      						<div class="collapsible-body">
+		      							<p>For this scenario, total population of each census block forms the basic community unit with only Tier 1 POS considered. Traveling distances were computed between POS locations and centroids of census blocks. After the identification of nearest POS for each census block, we computed the traveling distance increase if it were closed. This distance increase was then multiplied by the total census block population in order to obtain the vulnerability score. The higher the score, the greater the amount of aggregate travel required by the population to get to a secondary POS. The scores were then normalized to a range of 0 to 1.</p>
+											<p style="text-align: center;"><b><strong>Vulnerability Score</strong></b> <i>(normalized on a 0-1 scale)</i><br />
+											<b><strong> = Differential Distance between Primary and Secondary POS * Total Census Block Population</strong></b></p>
+											<p>The criticality score of each POS was then calculated as the total vulnerability scores that its disruption will result in for corresponding census blocks.</p>
+											<p style="text-align: center;"><b><strong>Criticality Score</strong></b>  <i>(normalized on a 0-1 scale)</i><br />
+											<b><strong> = Sum of Vulnerability Scores of Relevant Census Blocks	</strong></b></p>
+		      						</div>
+								</li>
+								<li>
+									<div class="collapsible-header"><h6><a href="#">SNAP</a></h6></div>
+		      						<div class="collapsible-body">
+		      							<p>This scenario focused on food vulnerability regarding a critical population segment- SNAP recipients. The key assumption underlying this scenario is that SNAP recipients shop at the closest store accepting SNAP benefits, and would shift to the next closest one also accepting SNAP benefits in the event of a closure. The greater the aggregate additional distance by the SNAP population to the secondary POS, the greater the vulnerability of that specific neighborhood - as well as the criticality of that primary POS to SNAP recipients.</p>
+										<p>This analysis was conducted on the census block with all SNAP-accepted POS in NYC. The additional distance traveled was defined the same way as in the General Population scenario - the difference in distance between the closest POS and the second-closest POS from the census block's centroid. This differential distance was then multiplied by the number of SNAP households within the census block in order to obtain the vulnerability score. As there is currently no census block level SNAP data but only at census tract level, we made a simple extrapolation assumption that the percentages of SNAP household are the same across different census block within that census tract. The higher the score, the greater the amount of aggregate travel required by SNAP recipients. We calculated this score only to those census tract with percentages of SNAP households larger than 20%. The percentage of SNAP households was then multiplied by the total households per block in order to obtain total SNAP households at census block level, which was then multiplied by traveling distance increase.</p>
+											<p style="text-align: center;"><b><strong>Vulnerability Score</strong></b>  <i>(normalized on a 0-1 scale)</i><br />
+											<b><strong> = Differential Distance between Primary and Secondary SNAP POS * % SNAP Households * Total Census Block Households</strong></b></p>
+											<p>The criticality scores of SNAP POSs were then calculated using the same approach in the total population scenario. The scores were also normalized to a scale of 0 to 1.</p>
+											<p style="text-align: center;"><b><strong>Criticality Score</strong></b>  <i>(normalized on a 0-1 scale)</i><br />
+											<b><strong> =  Sum of Vulnerability Scores of Relevant Census Blocks</strong></b></p>
+		      						</div>
+								</li>
+								<li>
+									<div class="collapsible-header"><h6><a href="#">NYCHA</a></h6></div>
+		      						<div class="collapsible-body">
+		      							<p>This scenario focused on food vulnerability with regards to another critical population segment: NYCHA households. This scenario can be considered as a specific subset of the General Population Scenario, with a specific focus on the NYCHA population. The key assumption underlying this scenario is that people choose their closest store as their primary POS, and would shift to the next closest one in the event of a closure. The greater the aggregate additional distance by the population to the secondary POS, the greater the vulnerability of that specific neighborhood, as well as the criticality of that primary POS.</p>
+										<p> The analysis was conducted on the NYCHA building level with Tier 1 POS. The additional distance traveled was defined as the difference in distance between the closest POS and the second-closest POS from NYCHA buildings. This differential distance was then multiplied by the number of NYCHA households of that NYCHA building in order to obtain the vulnerability score. The criticality scores were calculated using the same approach as in the total population scenario. Both scores were normalized to a scale of 0 to 1.</p>
+											<p style="text-align: center;"><b><strong>Vulnerability Score</strong></b>  <i>(normalized on a 0-1 scale)</i><br />
+											<b><strong> = Differential Distance between Primary and Secondary POS * NYCHA Households</strong></b></p>
+											<p style="text-align: center;"><b><strong>Criticality Score</strong></b>  <i>(normalized on a 0-1 scale)</i><br />
+											<b><strong> = Sum of Vulnerability Scores of Relevant NYCHA buildings</strong></b></p>
+		      						</div>
+								</li>
+							</ul>	
+						</div>
+					</li>
+				</ul> 
+			</div>
+		</div>
+	</div>
+</div>
+</main>
+<app-footer></app-footer>
+</body>

@@ -1,0 +1,12 @@
+<nav style="background: #015289;" class="pushpin-nav pinned" data-target="pintarget">
+	<div class="container nav-wrapper">
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a [routerLink]="['/home']" routerLinkActive="active">Home</a></li>
+				<li><a [routerLink]="['/results']" routerLinkActive="active">Results</a></li>
+				<li><a [routerLink]="['/maps']" routerLinkActive="active">Maps</a></li>
+				<li><a [routerLink]="['/']" routerLinkActive="active" (click)="logout()">Log Out</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>

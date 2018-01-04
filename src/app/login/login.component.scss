@@ -1,0 +1,167 @@
+/* config.css */
+
+/*helpers/align.css*/
+
+.align {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* helpers/grid.css */
+
+.grid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
+  max-width: 20rem;
+  width: 90%;
+}
+
+/* layout/base.css */
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #e8eaf6;
+  color: #606468;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  /*min-height: 100%;*/
+}
+
+/* modules/form.css */
+
+input {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+          transition: background-color 0.3s;
+}
+
+input[type='button'] {
+  cursor: pointer;
+}
+
+.form {
+  margin: -14px;
+  margin: -0.875rem;
+}
+
+.form input[type='password'],
+.form input[type='text'],
+.form input[type='button'] {
+  width: 100%;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 14px;
+  margin: 0.875rem;
+  
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* modules/login.css */
+
+.login {
+  color: #000;
+}
+
+.login svg {
+	fill: #015289;
+	margin:7px;
+	width:50px; 
+	height:50px;
+	vertical-align: middle;
+}
+
+.login input[type='text'],
+.login input[type='password'],
+.login input[type='button'] {
+  border-radius: 0.25rem;
+  padding: 16px;
+  padding: 1rem;
+  height:30px;
+}
+
+.login input[type='password'],
+.login input[type='text'] {
+  background-color: #015289;
+}
+
+.login input[type='password']:focus,
+.login input[type='password']:hover,
+.login input[type='text']:focus,
+.login input[type='text']:hover {
+  background-color: #eee;
+}
+
+.input-field input[type='text']:focus,
+.input-field input[type='password']:focus {
+     border-bottom: 1px solid #015289;
+     box-shadow: 0 2px 0 0 #fefefe;
+   }
+
+.login button {
+  background-color: #2D3171;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left:20px;
+  width:100%;
+  height:50px;
+}
+
+.login button:focus,
+.login button:hover {
+  background-color: #0C83C7;
+}
+
+/* modules/text.css */
+
+p {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}

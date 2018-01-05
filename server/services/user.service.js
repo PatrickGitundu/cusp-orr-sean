@@ -22,7 +22,8 @@ function createDB() {
 	try {
 		db = new sqlite3.Database(':memory:');
 		
-		const users = [['Kate','admin'],['Joe','admin'],['guest','guest']]
+		//Insert users and passwords into array
+		const users = []
 		db.serialize(function() {
 		    //Initialize table
 			db.run('drop table if exists users;');

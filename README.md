@@ -1,1 +1,9 @@
-https://cusp-orr-dev.herokuapps.com
+## Project Overview:
+
+This Capstone Project for CUSP was conducted in collaboration with the New York City Mayor's Office of Recovery and Resiliency (ORR) to identify the effects of food disruptions on vulnerable populations in New York City. The team identified metrics to define and identify the most vulnerable neighborhoods and critical points-of-sale (POS) outlets in various scenarios. POS outlets are susceptible to service disruptions, which may cause neighborhoods to be vulnerable to store closures and ultimately food shortages. The analysis was conducted for the general population as well as critical segments of the population - Supplemental Nutrition Assistance Program (SNAP) recipients and New York City Housing Authority (NYCHA) households.
+
+The findings show a consistency between critical POS outlets in vulnerable neighborhoods with large populations of SNAP and NYCHA populations. However, there were also many instances in which criticality did not conform to expected trends. The most critical neighborhoods and POS's by each scenario are provided as case studies in this report, both for validation as well as studying underlying socioeconomic trends. These results form the basis of the team's policy recommendations provided to the ORR.
+
+The project team also consolidated all the analyses into a web tool for the ORR, which provides an interactive visualization of population vulnerability scores and POS criticality scores. Using this, the ORR will be able to easily identify key neighborhoods and storefronts as the basis for targeted assistance programs. Moving forward, the ORR aims to build off the team's existing work and incorporate it as a tool for several of their initiatives.
+
+The app was built using Sqlite3, Express.js, Angular4.js, Node.js.
